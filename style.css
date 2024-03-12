@@ -1,0 +1,371 @@
+/* https://cdn.zoutons.com/images/home/biscuit_new.jpg   header bg*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+}
+button{
+  cursor: pointer;
+}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+.header_bg {
+  width: 100%;
+  height: 335px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.header_bg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#logo {
+  display: table-cell;
+}
+#logo a {
+  width: 180px;
+  color: #fff;
+  display: block;
+}
+.topmenu {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px 0;
+}
+.topmenu .container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topmenu button {
+  padding: 10px 30px;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 30px;
+  word-spacing: initial;
+  background: #3baeda;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.topmenu button img {
+  width: 25px;
+  height: auto;
+}
+.action {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+.serch_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.serch_container form {
+  max-width: 750px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.serch_container form button {
+  border: 0;
+  height: 48px;
+  max-width: 215px;
+  width: 30%;
+  font-size: 14px;
+  padding: 0 10px;
+  margin-left: -5px;
+  background: #3baeda;
+  color: #fff;
+  border-radius: 0 50px 50px 0;
+  outline: 0;
+}
+.serch_container form input {
+  border: 0;
+  max-width: 535px;
+  width: 70%;
+  height: 48px;
+  font-size: 17px;
+  padding: 0 10px 0 61px;
+  background-color: rgba(218, 218, 218, 0.5);
+  border-radius: 50px 0 0 50px;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  outline: none;
+}
+.main_title {
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+  font-size: 30px;
+  line-height: 31px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.top_box {
+  background: #fff;
+  width: 90%;
+  margin: 35px auto 0;
+  display: block;
+}
+.top_box .slider_right_head {
+  display: flex;
+  justify-content: space-between;
+  background: #f6bb43;
+  padding: 16px 20px;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+  border-bottom: 2px solid #efb201;
+}
+.slider_right_head h3 {
+  margin: 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.slider_right_head a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.32);
+}
+.top_box .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid lightgray;
+}
+.top_box .grid a {
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+.top_box .grid a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.coupon-count {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: none;
+}
+.top_box .grid a:hover .coupon-count {
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_Container {
+  position: absolute;
+  z-index: 9;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  top: 0;
+  left: 0;
+  display: none;
+}
+.login_Container .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  position: relative;
+  position: absolute;
+  background: #fff;
+  overflow-y: auto;
+  border-radius: 5px;
+  max-width: 950px;
+  min-width: 500px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  will-change: transform;
+}
+.login_Container .container .cross_button {
+  position: absolute;
+  right: 10px;
+border: none;
+background: transparent;
+outline: none;
+  color: gray;
+  font-size: 30px;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+.login_Container .left {
+  width: 350px;
+  min-height: 450px;
+  padding: 20px;
+  color: #fff;
+  background: bottom left no-repeat #013d62;
+}
+.login_Container .left h3{
+    color: #f6bb43;
+    font-size: 28px;
+}
+.login_Container .left ul{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 13px;
+}
+.login_Container .right {
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login_Container .right form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login_Container .right form button{
+    outline: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 13px 15px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1rem;
+    border-radius: 2px;
+    transition: all .3s ease-out;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+    background: #55aced;
+    color: #fff;
+}
+.signupTab{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    color: #efb201;
+}
+.signupTab button{
+    border: none;
+    outline: none;
+    background: transparent;
+        color: #efb201;
+        font-size: 18px;
+        text-transform: uppercase;
+}
+.form-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-group label{
+    display: flex;
+    gap: 5px;
+    text-wrap: nowrap;
+}
+.login_Container .right input{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    letter-spacing: .5px;
+}
+.google-button {
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    gap: 0.75rem;
+    color: rgb(65, 63, 63);
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+  }
+  
+  .google-button svg {
+    height: 24px;
+  }
+  
+  .google-button:hover {
+    transform: scale(1.02);
+  }
+  .toggle_form{
+    display: none;
+  }
+  .toggle_model{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
