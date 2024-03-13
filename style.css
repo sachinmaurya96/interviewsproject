@@ -31,6 +31,50 @@ button{
   height: auto;
   object-fit: cover;
 }
+.sidebar{
+  position: absolute;
+  z-index: 15;
+  background-color: #fff;
+  width: 300px;
+  border-left: 1px solid lightgray;
+  top: 0;
+  left: -300px;
+  height: 100%;
+  transition: 0.3s;
+}
+.sidebar_show{
+  left: 0;
+  transition: 0.3s;
+}
+.sidebar .top{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  font-size: 30px;
+  background-color: #3baeda;
+  color: #fff;
+  padding: 0 10px;
+}
+.sidebar .top a{
+  color: #fff;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .nav_links{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+  padding: 0 10px;
+  color: gray;
+}
+.sidebar .nav_links a{
+  text-decoration: none;
+  color: gray;
+  text-transform: uppercase;
+}
 #logo {
   display: table-cell;
 }
@@ -45,12 +89,13 @@ button{
   padding: 5px 0;
 }
 .topmenu .container {
-  width: 100%;
-  max-width: 1170px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.topmenu .logo a{
+  color: #fff;
 }
 .topmenu button {
   padding: 10px 30px;
@@ -71,6 +116,12 @@ button{
 .topmenu button img {
   width: 25px;
   height: auto;
+}
+.menu_icon{
+  display: none;
+}
+.serch{
+  display: none;
 }
 .action {
   display: flex;
@@ -211,11 +262,10 @@ nav ul li a {
 }
 .login_Container {
   position: absolute;
-  z-index: 9;
+  z-index: 20;
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-
   top: 0;
   left: 0;
   display: none;
@@ -229,7 +279,7 @@ nav ul li a {
   overflow-y: auto;
   border-radius: 5px;
   max-width: 950px;
-  min-width: 500px;
+ 
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
   border: 1px solid #ddd;
   will-change: transform;
@@ -368,4 +418,69 @@ outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  @media only screen and (max-width: 1024px) {
+    .container {
+     width: 100%;
+     padding: 0 50px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .header_bg{
+      display: none;
+    }
+    nav{
+      display: none;
+    }
+    .serch_container{
+      display: none;
+    }
+    .login_Container .left{
+      display:  none;
+    }
+    .login_Container .container{
+      grid-template-columns: 1fr;
+      margin: 0 20px;
+      width: 600px;
+    }
+    .topmenu{
+      background-color: #fff;
+      color: #027cd5;
+      border-bottom: 1px solid lightgray;
+    
+    }
+    .topmenu .action{
+      display: none;
+    }
+    .menu_icon{
+      display: block;
+    }
+    .serch{
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 426px){
+    .container {
+      width: 100%;
+      padding: 0 10px;
+     }
+     .top_box .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid lightgray;
+    }
+    .login_Container .container{
+      padding: 0;
+      margin: 0;
+      width: 300px;
+    }
+    .login_Container{
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+    .login_Container .right {
+      padding: 10px;
+      width: 100%;
+  }
   }
