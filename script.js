@@ -4,10 +4,11 @@ const login = document.getElementById("login")
 const signup = document.getElementById("signup")
 const loginBtn = document.getElementById("login_btn")
 const signupBtn = document.getElementById("signup_btn")
-const openModal = document.getElementById("open_model")
+const openModal = document.getElementsByClassName("open_model")
 const sidebarToggle = document.getElementById("sidebar_toggle")
 const sidebar = document.getElementById("sidebarmenu")
 const closeSidebar = document.getElementById("close_sidebar")
+
 
 signupBtn.addEventListener("click",()=>{
     signup.classList.remove("toggle_form")
@@ -20,9 +21,13 @@ loginBtn.addEventListener("click",()=>{
 crossBtn.addEventListener("click",()=>{
    modal.classList.remove("toggle_model")
 })
-openModal.addEventListener("click",()=>{
-    modal.classList.add("toggle_model")
- })
+Array.from(openModal).forEach(element => {
+    element.addEventListener("click",()=>{
+        modal.classList.add("toggle_model")
+     })
+});
+
+
 sidebarToggle.addEventListener("click",()=>{
     sidebar.classList.add("sidebar_show")
 })

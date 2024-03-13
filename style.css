@@ -426,6 +426,9 @@ outline: none;
     }
   }
   @media only screen and (max-width: 768px) {
+    .topmenu .logo a{
+      color: #027cd5;
+    }
     .header_bg{
       display: none;
     }
